@@ -10,10 +10,10 @@ const Rate = ({ rating, setRatingSearch }) => {
                         ★
                     </span>
                 );
-                return starsArry;
+                
             } else {
                 starsArry.push(
-                    <span key={i} onclick={() => setRatingSearch(i)}>
+                    <span key={i} onClick={() => setRatingSearch(i)}>
                         ☆
                     </span>
                 );
@@ -21,9 +21,7 @@ const Rate = ({ rating, setRatingSearch }) => {
         }
             return starsArry;
         }
-        return <div>
-            {stars(rating)}
-        </div>
+        return <div>{stars(rating)} </div>
     };
     Rate.defaultProps = {
         setRatingSearch: () => { },

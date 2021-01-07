@@ -1,20 +1,18 @@
 import React from 'react';
 import MovieCard from './MovieCard/MovieCard';
 
-const MovieListe = ({ movies, nameSearch, ratingSearch }) => {
+const MovieListe = ({ movies, namesearch, RatingSearch }) => {
     return (
         <div className="movieliste"
         >
             {movies
                 .filter(
-                    (el) => console.log(el)
-                   
-                        el.name.toLowerCase().includes(nameSearch.toLowerCase().trim()) &&
-                        el.rating >= ratingSearch
-                )
-                .map((el, i) => (
+                    (el) => 
+                    el.name.toLowerCase().includes(namesearch.toLowerCase().trim())  && el.rating >= RatingSearch )
+                   . map((el, i) => (
                     <MovieCard key={i} movie={el} />
-                ))}
+                   ))}
+            
         </div>
     );
 };

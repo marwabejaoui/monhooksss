@@ -6,7 +6,6 @@ import { movieData } from './component/MovieData';
 import AddMovie from './component/AddMovie/AddMovie';
 import SearchMovie from './component/SearchMovie/SearchMovie';
 
-
 function App() {
   const [movies, setMovies] = useState(movieData);
   const [namesearch, setNameSearch] = useState('');
@@ -17,19 +16,16 @@ function App() {
     setMovies([...movies, newMovie]);
   };
   
-  
   return (
     <div className="App">
       <SearchMovie setNameSearch={setNameSearch}
         RatingSearch={RatingSearch}
-        setRatingSearch={setRatingSearch}
-      />
+        setRatingSearch={setRatingSearch} />
+            <AddMovie addNewMovie={addNewMovie} />
       <MovieListe movies={movies}
         namesearch={namesearch}
         RatingSearch={RatingSearch}
       />
-      <AddMovie addNewMovie={addNewMovie} />
-      
     </div>
   );
 }

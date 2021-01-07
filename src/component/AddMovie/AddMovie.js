@@ -60,7 +60,13 @@ const AddMovie = ({addNewMovie}) => {
             />
             <label>Movie Rate</label>
             <div className="rating-search">
-              
+            <input
+              type="number"
+              name="rating"
+              value={rating}
+              required
+              onChange={(e) => setRating(e.target.value)}
+            />
                         </div>
                         
                         <label>Movie Release Date</label>

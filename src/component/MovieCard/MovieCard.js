@@ -2,7 +2,6 @@ import React from 'react';
 import './MovieCard.css';
 import Rate from '../Rate';
 
-
 const MovieCard = ({
     movie :{ name, rating, image, date, type, description },
 }) => {
