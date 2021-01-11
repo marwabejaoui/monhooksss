@@ -67,13 +67,16 @@ h1 {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  padding: 0 0 0 40px;
+  padding: 40px;
   color: #070338;
-  margin: 0;
+  margin: 50;
+}
+.description {
+  padding: 40px;
 }
 
 .description a:hover {
-  text-decoration: underline;
+  display: block;
 }
 .card_right__button a {
   color: #2112a8;
@@ -105,4 +108,8 @@ h1 {
   transition-property: all;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+}
+.all {
+  justify-content: space-between;
+  display: contents;
 }

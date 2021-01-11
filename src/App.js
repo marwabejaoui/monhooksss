@@ -5,6 +5,8 @@ import './App.css';
 import { movieData } from './component/MovieData';
 import AddMovie from './component/AddMovie/AddMovie';
 import SearchMovie from './component/SearchMovie/SearchMovie';
+import {  Route } from 'react-router-dom'
+import Details from "./component/Details"
 
 function App() {
   const [movies, setMovies] = useState(movieData);
@@ -21,11 +23,17 @@ function App() {
       <SearchMovie setNameSearch={setNameSearch}
         RatingSearch={RatingSearch}
         setRatingSearch={setRatingSearch} />
-            <AddMovie addNewMovie={addNewMovie} />
+     
       <MovieListe movies={movies}
         namesearch={namesearch}
         RatingSearch={RatingSearch}
-      />
+        />
+       
+      <AddMovie addNewMovie={addNewMovie} />
+      <Route path='/'  />
+      <Route path='/details/:movieId' > <Details movies={movies}/> </Route>
+
+      
     </div>
   );
 }

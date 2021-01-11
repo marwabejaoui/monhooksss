@@ -1,6 +1,7 @@
 import React from 'react';
 import MovieCard from './MovieCard/MovieCard';
 
+
 const MovieListe = ({ movies, namesearch, RatingSearch }) => {
     return (
         <div className="movieliste"

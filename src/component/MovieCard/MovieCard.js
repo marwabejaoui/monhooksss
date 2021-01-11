@@ -1,16 +1,19 @@
 import React from 'react';
 import './MovieCard.css';
 import Rate from '../Rate';
+import { Link} from 'react-router-dom';
+
 
 const MovieCard = ({
-    movie :{ name, rating, image, date, type, description },
+    movie :{ id,name, rating, image, date, type, description }
 }) => {
+ 
     return (
         <div className="card">
             <div className=" cardimg">
                 <img src={image} alt="shark" />
             </div>
-
+            <div className="all">
             <div className="title">
                 <h1>{name}</h1>
             </div>
@@ -25,13 +28,16 @@ const MovieCard = ({
               
                 </div>
                 <div className="description">
-                    <p> {description} </p>
-                </div>
+                  <a href =" "> description </a>
+                    </div>
+                    
                 <div className="card_right__button">
-                    <a href=" ">WATCH</a>
-                </div>
+                    <Link to={`/details/${id}`}>WATCH</Link>
+                    </div>
+                    </div>
             </div>
         </div>
     );
+  
 };
 export default MovieCard;
